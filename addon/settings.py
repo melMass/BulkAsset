@@ -2,7 +2,7 @@ import bpy
 
 
 class BulkAssetToolsPreferences(bpy.types.AddonPreferences):
-    bl_idname = __package__
+    bl_idname = "BulkAsset"
     max_threads: bpy.props.IntProperty(name="Max Threads", default=10, min=1)
     background: bpy.props.BoolProperty(
         name="Run child processes in background mode", default=True)

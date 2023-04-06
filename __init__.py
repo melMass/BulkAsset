@@ -1,16 +1,16 @@
 import bpy
-from .tag_copy import *
-from .rename import *
-from .tag_add import *
-from .tag_remove import *
-from .move import *
-from .author import *
-from .description import *
-from .clear import *
-from .copyright import *
-from .license import *
-from .utilities import header_menu_func
-from .settings import *
+from .addon.tag_copy import *
+from .addon.rename import *
+from .addon.tag_add import *
+from .addon.tag_remove import *
+from .addon.move import *
+from .addon.author import *
+from .addon.description import *
+from .addon.clear import *
+from .addon.copyright import *
+from .addon.license import *
+from .addon.utilities import header_menu_func
+from .addon.settings import *
 
 bl_info = {
     "name": "Bulk Asset Tools",
@@ -20,7 +20,7 @@ bl_info = {
     "blender": (3, 5, 0),
     "description": "A set of tools for managing multiple assets at the same time",
     "doc_url": "",
-    "category": "Assets"
+    "category": "Assets",
 }
 
 classes = (
@@ -34,7 +34,7 @@ classes = (
     ASSET_OT_RenameOperator,
     ASSET_OT_ClearOperator,
     ASSET_OT_LicenseOperator,
-    ASSET_OT_CopyrightOperator
+    ASSET_OT_CopyrightOperator,
 )
 
 menus = (
@@ -47,7 +47,7 @@ menus = (
     ASSET_MT_tag_copy_menu_func,
     ASSET_MT_tag_remove_menu_func,
     ASSET_MT_rename_menu_func,
-    ASSET_MT_clear_menu_func
+    ASSET_MT_clear_menu_func,
 )
 
 
