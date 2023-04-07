@@ -60,7 +60,7 @@ def register():
         for menu in menus:
             bpy.types.ASSETBROWSER_MT_asset.append(menu)
             bpy.types.ASSETBROWSER_MT_context_menu.append(menu)
-    else:
+    elif hasattr(bpy.types, "ASSETBROWSER_MT_edit"):
         bpy.types.ASSETBROWSER_MT_edit.append(header_menu_func)
         bpy.types.ASSETBROWSER_MT_context_menu.append(header_menu_func)
         for menu in menus:
@@ -75,7 +75,7 @@ def unregister():
         for menu in menus:
             bpy.types.ASSETBROWSER_MT_asset.remove(menu)
             bpy.types.ASSETBROWSER_MT_context_menu.remove(menu)
-    else:
+    elif hasattr(bpy.types, "ASSETBROWSER_MT_edit"):
         bpy.types.ASSETBROWSER_MT_edit.remove(header_menu_func)
         bpy.types.ASSETBROWSER_MT_context_menu.remove(header_menu_func)
         for menu in menus:
